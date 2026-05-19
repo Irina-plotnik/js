@@ -307,3 +307,257 @@ console.log("A > B:", frA2 > frB2);   // false
 console.log("A < B:", frA2 < frB2);   // true
 console.log("A === B:", frA2 === frB2); // false
 console.log("A !== B:", frA2 !== frB2); // true
+
+
+
+// Задача 3
+/* 
+Напишите генератор двух случайных чисел в диапазоне между n и m включительно. 
+Учтите, что n и m могут быть отрицательными, а также может быть n > m или n < m.
+Выведите два произвольных числа в консоль с помощью console.log.
+Сравните два полученных числа. 
+Выведите результаты их сравнения >, <, ≥, ≤, ===, ≠ с помощью console.log.    
+*/
+
+n = 100;
+m = -5;
+
+let min = Math.min(n, m);
+let max = Math.max(n, m); // Используем max, чтобы не писать Math.abs
+
+// 1. Ширина диапазона ВКЛЮЧИТЕЛЬНО (+1)
+let range = max - min + 1; 
+
+// 2. округленное число от 0 до range
+let numberInRange = Math.floor(Math.random() * range); 
+
+// 3. Получаем итоговые числа
+let number1 = min + numberInRange;
+let number2 = min + Math.floor(Math.random() * range); // Для второго числа
+
+console.log("Первое число:", number1);
+console.log("Второе число:", number2);
+
+// Выводим результаты сравнения чисел
+console.log("number1 > number2:", number1 > number2);
+console.log("number1 < number2:", number1 < number2);
+console.log("number1 >= number2:", number1 >= number2);
+console.log("number1 <= number2:", number1 <= number2);
+console.log("number1 === number2:", number1 === number2);
+console.log("number1 !== number2:", number1 !== number2);
+
+
+function getRandomInt(n, m) {
+    let min = Math.min(n, m);
+    let max = Math.max(n, m);
+    let range = max - min + 1;  // Находим ширину диапазона
+    
+    let numberInRange = Math.floor(Math.random() * range); 
+
+    // Возвращаем итоговое число
+    return min + numberInRange; 
+}
+
+// --- ИСПОЛЬЗОВАНИЕ ФУНКЦИИ (СНАРУЖИ) ---
+// 2. Задаем параметры для примера 
+    n = 100;
+    m = -5;
+
+    // 3. Вызываем функцию два раза, чтобы получить два РАЗНЫХ числа
+    let num1 = getRandomInt(n, m);
+    let num2 = getRandomInt(n, m);
+
+    // 4. Выводим их в консоль
+    console.log("Первое число:", num1);
+    console.log("Второе число:", num2);
+
+    // 5. Выводим ВСЕ сравнения, как требует задание
+    console.log("num1 > num2:", num1 > num2);
+    console.log("num1 < num2:", num1 < num2);
+    console.log("num1 >= num2:", num1 >= num2);
+    console.log("num1 <= num2:", num1 <= num2);
+    console.log("num1 === num2:", num1 === num2);
+    console.log("num1 !== num2:", num1 !== num2);
+
+
+
+//
+n = 0;
+m = 100;
+
+min = Math.min(n, m);
+max = Math.max(n, m); 
+
+// Ширина диапазона
+range = max - min + 1; 
+
+// округленное число от 0 до range
+numberInRange = Math.floor(Math.random() * range);
+
+// итоговые числа
+number1 = min + numberInRange;
+number2 = min + Math.floor(Math.random() * range);
+
+console.log("Первое число:", number1);
+console.log("Второе число:", number2);
+
+// Выводим результаты сравнения чисел
+console.log("number1 > number2:", number1 > number2);
+console.log("number1 < number2:", number1 < number2);
+console.log("number1 >= number2:", number1 >= number2);
+console.log("number1 <= number2:", number1 <= number2);
+console.log("number1 === number2:", number1 === number2);
+console.log("number1 !== number2:", number1 !== number2);
+
+
+
+function getRandomInt(n,m) {
+    let min = Math.min(n, m);
+    let max = Math.max(n, m); 
+    let range = max - min + 1; 
+
+    let numberInRange = Math.floor(Math.random() * range);
+
+    return min + numberInRange;
+}
+
+// параметры для примера 
+    n = 0;
+    m = 100;
+    
+ // Вызываем функцию два раза, чтобы получить два РАЗНЫХ числа
+    let numb1 = getRandomInt(n, m);
+    let numb2 = getRandomInt(n, m);
+
+    // Выводим их в консоль
+    console.log("Первое число:", numb1);
+    console.log("Второе число:", numb2);
+
+    // Выводим ВСЕ сравнения, как требует задание
+    console.log("numb1 > numb2:", numb1 > numb2);
+    console.log("numb1 < numb2:", numb1 < numb2);
+    console.log("numb1 >= numb2:", numb1 >= numb2);
+    console.log("numb1 <= numb2:", numb1 <= numb2);
+    console.log("numb1 === numb2:", numb1 === numb2);
+    console.log("numb1 !== numb2:", numb1 !== numb2);
+
+
+//
+n = 2;
+m = 5;
+
+min = Math.min(n, m);
+max = Math.max(n, m); 
+
+// Ширина диапазона
+range = max - min + 1; 
+
+// округленное число от 0 до range
+numberInRange = Math.floor(Math.random() * range);
+
+// итоговые числа
+number1 = min + numberInRange;
+number2 = min + Math.floor(Math.random() * range);
+
+console.log("Первое число:", number1);
+console.log("Второе число:", number2);
+
+// Выводим результаты сравнения чисел
+console.log("number1 > number2:", number1 > number2);
+console.log("number1 < number2:", number1 < number2);
+console.log("number1 >= number2:", number1 >= number2);
+console.log("number1 <= number2:", number1 <= number2);
+console.log("number1 === number2:", number1 === number2);
+console.log("number1 !== number2:", number1 !== number2);
+
+
+function getRandomInt(n,m) {
+    let min = Math.min(n, m);
+    let max = Math.max(n, m); 
+    let range = max - min + 1; 
+
+    let numberInRange = Math.floor(Math.random() * range);
+
+    return min + numberInRange;
+}
+
+// параметры для примера 
+    n = 2;
+    m = 5;
+    
+ // Вызываем функцию два раза, чтобы получить два РАЗНЫХ числа
+    let numb3_1 = getRandomInt(n, m);
+    let numb3_2 = getRandomInt(n, m);
+
+    // Выводим их в консоль
+    console.log("Первое число:", numb3_1);
+    console.log("Второе число:", numb3_2);
+
+    // Выводим ВСЕ сравнения, как требует задание
+    console.log("numb3_1 > numb3_2:", numb3_1 > numb3_2);
+    console.log("numb3_1 < numb3_2:", numb3_1 < numb3_2);
+    console.log("numb3_1 >= numb3_2:", numb3_1 >= numb3_2);
+    console.log("numb3_1 <= numb3_2:", numb3_1 <= numb3_2);
+    console.log("numb3_1 === numb3_2:", numb3_1 === numb3_2);
+    console.log("numb3_1 !== numb3_2:", numb3_1 !== numb3_2);
+
+
+
+//
+n = -3;
+m = -10;
+
+min = Math.min(n, m);
+max = Math.max(n, m); 
+
+// Ширина диапазона
+range = max - min + 1; 
+
+// округленное число от 0 до range
+numberInRange = Math.floor(Math.random() * range);
+
+// итоговые числа
+number1 = min + numberInRange;
+number2 = min + Math.floor(Math.random() * range);
+
+console.log("Первое число:", number1);
+console.log("Второе число:", number2);
+
+// Выводим результаты сравнения чисел
+console.log("number1 > number2:", number1 > number2);
+console.log("number1 < number2:", number1 < number2);
+console.log("number1 >= number2:", number1 >= number2);
+console.log("number1 <= number2:", number1 <= number2);
+console.log("number1 === number2:", number1 === number2);
+console.log("number1 !== number2:", number1 !== number2);
+
+
+function getRandomInt(n,m) {
+    let min = Math.min(n, m);
+    let max = Math.max(n, m); 
+    let range = max - min + 1; 
+
+    let numberInRange = Math.floor(Math.random() * range);
+
+    return min + numberInRange;
+}
+
+// параметры для примера 
+    n = -3;
+    m = -10;
+    
+ // Вызываем функцию два раза, чтобы получить два РАЗНЫХ числа
+    let numb4_1 = getRandomInt(n, m);
+    let numb4_2 = getRandomInt(n, m);
+
+    // Выводим их в консоль
+    console.log("Первое число:", numb4_1);
+    console.log("Второе число:", numb4_2);
+
+    // Выводим ВСЕ сравнения, как требует задание
+    console.log("numb4_1 > numb4_2:", numb4_1 > numb4_2);
+    console.log("numb4_1 < numb4_2:", numb4_1 < numb4_2);
+    console.log("numb4_1 >= numb4_2:", numb4_1 >= numb4_2);
+    console.log("numb4_1 <= numb4_2:", numb4_1 <= numb4_2);
+    console.log("numb4_1 === numb4_2:", numb4_1 === numb4_2);
+    console.log("numb4_1 !== numb4_2:", numb4_1 !== numb4_2);
