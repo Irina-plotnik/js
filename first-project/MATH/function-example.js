@@ -40,6 +40,24 @@ function squareX(a, b, c) {
     }
 }
 
+let day = 'Вторник';
+
+switch (day) {
+    case 'Понедельник':
+    case 'Вторник':
+    case 'Среда':
+    case 'Четверг':
+    case 'Пятница':
+        console.log(day + 'это будний день');
+        break;
+    case 'Суббота':
+    case 'Воскресенье':
+        console.log(day + 'это выходной день');
+        break;
+    default:
+        console.log('Я не слышал о дне недели, который называется' + day);
+}
+
 let firstResult = squareX(2, 20, 8);
 console.log(firstResult);
 
