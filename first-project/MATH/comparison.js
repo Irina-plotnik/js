@@ -57,3 +57,26 @@ true !== 'true';
 '1' > true; // false, 1 > 1
 '1' > false; // true, 1 > 0
 'x' > true; // false, NaN > 1
+
+let number = -1;
+let bool = false;
+let func = () => {};
+console.log(number === bool);
+console.log(Boolean(number));
+console.log(Boolean(number) === bool);
+
+console.log(typeof number);
+console.log(typeof Boolean(number));
+console.log(typeof func);
+console.log(typeof null);
+console.log(typeof NaN);
+console.log(typeof undefined);
+console.log(typeof Infinity);
+
+console.log(typeof (Infinity - Infinity));
+console.log(typeof (Infinity - Infinity));
+
+console.log(typeof NaN === typeof (Infinity - Infinity));
+console.log(typeof NaN === typeof (Infinity / Infinity));
+
+console.log(Boolean(Infinity - Infinity));
